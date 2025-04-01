@@ -939,7 +939,7 @@
 
 .section_banner .three_banner a {
     display: block;
-    aspect-ratio: 1440/500;
+    /* aspect-ratio: 1440/500; */
     position: relative;
     overflow: hidden
 }
