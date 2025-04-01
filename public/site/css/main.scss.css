@@ -6148,7 +6148,8 @@ footer.footer .footer-click:last-child {
     font-weight: 700;
     font-size: 1.4rem;
     display: block;
-    line-height: normal
+    line-height: normal;
+    color: #1F1F29;
 }
 
 .def-content .item>a .detail .arcu-item-subtitle {

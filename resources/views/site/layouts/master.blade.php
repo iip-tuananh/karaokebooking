@@ -212,248 +212,11 @@
             return false;
         })
     </script>
-    <!-- <div id="popup-cart-desktop" class="popup-cart">
-         <div class="header-popcart">
-            <div class="top-cart-header">
-               <span>
-                  <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-check-circle fa-w-16">
-                     <path fill="currentColor" d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 464c-118.664 0-216-96.055-216-216 0-118.663 96.055-216 216-216 118.664 0 216 96.055 216 216 0 118.663-96.055 216-216 216zm141.63-274.961L217.15 376.071c-4.705 4.667-12.303 4.637-16.97-.068l-85.878-86.572c-4.667-4.705-4.637-12.303.068-16.97l8.52-8.451c4.705-4.667 12.303-4.637 16.97.068l68.976 69.533 163.441-162.13c4.705-4.667 12.303-4.637 16.97.068l8.451 8.52c4.668 4.705 4.637 12.303-.068 16.97z" class=""></path>
-                  </svg>
-                  Bạn đã thêm [<a class="cart-popup-name" href="#" ></a>] vào giỏ hàng
-               </span>
-            </div>
-            <a class="noti-cart-count" href="/cart" title="Giỏ hàng">
-            Giỏ hàng của bạn hiện có <span class="count_item_pr"></span> sản phẩm
-            </a>
-            <a title="Đóng" class="cart_btn-close" href="javascript:;">
-               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="512" height="512" x="0" y="0" viewBox="0 0 365.696 365.696" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
-                  <g>
-                     <path xmlns="http://www.w3.org/2000/svg" d="m243.1875 182.859375 113.132812-113.132813c12.5-12.5 12.5-32.765624 0-45.246093l-15.082031-15.082031c-12.503906-12.503907-32.769531-12.503907-45.25 0l-113.128906 113.128906-113.132813-113.152344c-12.5-12.5-32.765624-12.5-45.246093 0l-15.105469 15.082031c-12.5 12.503907-12.5 32.769531 0 45.25l113.152344 113.152344-113.128906 113.128906c-12.503907 12.503907-12.503907 32.769531 0 45.25l15.082031 15.082031c12.5 12.5 32.765625 12.5 45.246093 0l113.132813-113.132812 113.128906 113.132812c12.503907 12.5 32.769531 12.5 45.25 0l15.082031-15.082031c12.5-12.503906 12.5-32.769531 0-45.25zm0 0" fill="#ffffff" data-original="#000000" style="" class=""/>
-                  </g>
-               </svg>
-            </a>
-         </div>
-         <div class="cartPopupContainer">
-         </div>
-      </div> -->
-    <!-- <div id="popup-cart-mobile" class="popup-cart-mobile">
-         <div class="header-popcart">
-            <div class="top-cart-header">
-               <span>
-                  <svg xmlns="http://www.w3.org/2000/svg" height="682.66669pt" viewBox="-21 -21 682.66669 682.66669" width="682.66669pt">
-                     <path d="m322.820312 387.933594 279.949219-307.273438 36.957031 33.671875-314.339843 345.023438-171.363281-162.902344 34.453124-36.238281zm297.492188-178.867188-38.988281 42.929688c5.660156 21.734375 8.675781 44.523437 8.675781 68.003906 0 148.875-121.125 270-270 270s-270-121.125-270-270 121.125-270 270-270c68.96875 0 131.96875 26.007812 179.746094 68.710938l33.707031-37.113282c-58.761719-52.738281-133.886719-81.597656-213.453125-81.597656-85.472656 0-165.835938 33.285156-226.273438 93.726562-60.441406 60.4375-93.726562 140.800782-93.726562 226.273438s33.285156 165.835938 93.726562 226.273438c60.4375 60.441406 140.800782 93.726562 226.273438 93.726562s165.835938-33.285156 226.273438-93.726562c60.441406-60.4375 93.726562-140.800782 93.726562-226.273438 0-38.46875-6.761719-75.890625-19.6875-110.933594zm0 0"/>
-                  </svg>
-                  Mua hàng thành công
-               </span>
-            </div>
-            <div class="media-content bodycart-mobile">
-            </div>
-            <a class="noti-cart-count" href="/cart" title="Giỏ hàng"> Giỏ hàng của bạn hiện có <span class="count_item_pr"></span> sản phẩm </a>
-            <a title="Đóng" class="cart_btn-close iconclose" href="javascript:;">
-               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
-                  <g>
-                     <g>
-                        <path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717    L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859    c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287    l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285    L284.286,256.002z"/>
-                     </g>
-                  </g>
-               </svg>
-            </a>
-            <div class="bottom-action">
-               <div class="cart_btn-close btn btn-extent">
-                  Tiếp tục mua hàng
-               </div>
-               <a href="/checkout" class="checkout btn btn-primary" title="Thanh toán ngay">
-               Thanh toán ngay
-               </a>
-            </div>
-         </div>
-      </div>
-      <div id="quick-view-product" class="quickview-product" style="display:none;">
-         <div class="quickview-overlay fancybox-overlay fancybox-overlay-fixed"></div>
-         <div class="quick-view-product"></div>
-         <div id="quickview-modal" style="display:none;">
-            <div class="block-quickview primary_block details-product">
-               <div class="row">
-                  <div class="product-left-column product-images col-xs-12 col-sm-4 col-md-4 col-lg-5 col-xl-5">
-                     <div class="image-block large-image col_large_default">
-                        <span class="view_full_size">
-                        <a class="img-product" title="Ảnh sản phẩm" href="javascript:;">
-                        <img src="//bizweb.dktcdn.net/100/539/564/themes/978660/assets/logo.png?1742987288781" id="product-featured-image-quickview" class="img-responsive product-featured-image-quickview" alt="quickview"  />
-                        </a>
-                        </span>
-                        <div class="loading-imgquickview" style="display:none;"></div>
-                     </div>
-                     <div class="more-view-wrapper clearfix">
-                        <div class="thumbs_quickview owl_nav_custome1 swiper-container" id="thumbs_list_quickview">
-                           <ul class="product-photo-thumbs quickview-more-views-owlslider not-thuongdq swiper-wrapper" id="thumblist_quickview"></ul>
-                           <div class="swiper-button-prev">
-                           </div>
-                           <div class="swiper-button-next">
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="product-center-column product-info product-item col-xs-12 col-sm-6 col-md-8 col-lg-7 col-xl-7 details-pro style_product style_border">
-                     <div class="box-product-info">
-                        <div class="head-qv group-status">
-                           <h3 class="qwp-name title-product">abc</h3>
-                           <div class="vend-qv group-status">
-                              <div class="left_vend">
-                                 <div class="first_status ">Thương hiệu:
-                                    <span class="vendor_ status_name"></span>
-                                 </div>
-                                 <span class="line_tt">|</span>
-                                 <div class="top_sku first_status">Mã sản phẩm:
-                                    <span class="sku_ status_name"></span>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="quickview-info">
-                           <span class="prices price-box">
-                           <span class="price product-price"></span>
-                           <del class="old-price"></del>
-                           </span>
-                        </div>
-                        <div class="product-description product-summary">
-                           <div class="rte">
-                           </div>
-                        </div>
-                        <form action="/cart/add" method="post" enctype="multipart/form-data" class="quick_option variants form-ajaxtocart form-product">
-                           <span class="price-product-detail d-none" style="opacity: 0;">
-                           <span class=""></span>
-                           </span>
-                           <select name='variantId' class="d-none" style="display:none"></select>
-                           <div class="form_product_content">
-                              <div class="count_btn_style quantity_wanted_p">
-                                 <div class=" soluong1 clearfix">
-                                    <div class="input_number_product">
-                                       <a class="btn_num num_1 button button_qty" href="javascript:;" onClick="var result = document.getElementById('quantity-detail'); var qtyqv = result.value; if( !isNaN( qtyqv ) &amp;&amp; qtyqv &gt; 1 ) result.value--;return false;">-</a>
-                                       <input type="text" id="quantity-detail" name="quantity" value="1" maxlength="2" class="form-control prd_quantity" onkeypress="if ( isNaN(this.value + String.fromCharCode(event.keyCode) )) return false;" onchange="if(this.value == 0)this.value=1;">
-                                       <a class="btn_num num_2 button button_qty" href="javascript:;" onClick="var result = document.getElementById('quantity-detail'); var qtyqv = result.value; if( !isNaN( qtyqv )) result.value++;return false;">+</a>
-                                    </div>
-                                 </div>
-                                 <div class="button_actions clearfix">
-                                    <button type="submit" class="btn_cool btn btn_base fix_add_to_cart ajax_addtocart btn_add_cart btn-cart add_to_cart add_to_cart_detail btn btn-primary">
-                                    <span class="btn-content text_1">Thêm vào giỏ hàng</span>
-                                    </button>
-                                 </div>
-                              </div>
-                           </div>
-                        </form>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <a title="Close" class="quickview-close close-window" href="javascript:;">
-               <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-times fa-w-10">
-                  <path fill="currentColor" d="M207.6 256l107.72-107.72c6.23-6.23 6.23-16.34 0-22.58l-25.03-25.03c-6.23-6.23-16.34-6.23-22.58 0L160 208.4 52.28 100.68c-6.23-6.23-16.34-6.23-22.58 0L4.68 125.7c-6.23 6.23-6.23 16.34 0 22.58L112.4 256 4.68 363.72c-6.23 6.23-6.23 16.34 0 22.58l25.03 25.03c6.23 6.23 16.34 6.23 22.58 0L160 303.6l107.72 107.72c6.23 6.23 16.34 6.23 22.58 0l25.03-25.03c6.23-6.23 6.23-16.34 0-22.58L207.6 256z" class=""></path>
-               </svg>
-            </a>
-         </div>
-      </div> -->
     <link rel="preload" as="script" href="/site/js/quickview.js?1742987288781" />
     <script type="text/javascript" defer src="/site/js/quickview.js?1742987288781"></script>
     <link rel="preload" as="script" href="/site/js/main.js?1742987288781" />
     <script src="/site/js/main.js?1742987288781" type="text/javascript"></script>
     <script src="/site/js/index.js?1742987288781" type="text/javascript"></script>
-    <!-- <div id="modal-banner" class="modal-banner" style="display:none;" data-delay="5000">
-         <div class="modalbanner-overlay fancybox-overlay fancybox-overlay-fixed"></div>
-         <div class="modal-banner-promo">
-            <div class="modal-body" >
-               <form>
-                  <a href="/collections/all" title="Chương trình khuyến mãi" class="banner-promotion" data-section="banner_popup">
-                     <script type="text/x-custom-template" data-template="banner_popup">
-                        <img width="500" height="500" alt="Chương trình khuyến mãi" src="//bizweb.dktcdn.net/100/539/564/themes/978660/assets/popup_banner.jpg?1742987288781" />
-                     </script>
-                  </a>
-                  <div class="check-close">
-                     <input type="checkbox" id="check-close-banner" name="vehicle1" value="Bike">
-                     <label for="check-close-banner">Không hiển thị hôm nay</label>
-                  </div>
-                  <a title="Đóng" class="modalbanner-close close-window" href="javascript:;">
-                     <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-times fa-w-10">
-                        <path fill="currentColor" d="M207.6 256l107.72-107.72c6.23-6.23 6.23-16.34 0-22.58l-25.03-25.03c-6.23-6.23-16.34-6.23-22.58 0L160 208.4 52.28 100.68c-6.23-6.23-16.34-6.23-22.58 0L4.68 125.7c-6.23 6.23-6.23 16.34 0 22.58L112.4 256 4.68 363.72c-6.23 6.23-6.23 16.34 0 22.58l25.03 25.03c6.23 6.23 16.34 6.23 22.58 0L160 303.6l107.72 107.72c6.23 6.23 16.34 6.23 22.58 0l25.03-25.03c6.23-6.23 6.23-16.34 0-22.58L207.6 256z" class=""></path>
-                     </svg>
-                  </a>
-               </form>
-            </div>
-         </div>
-      </div>
-      <script>
-          $(document).ready(function($) {
-              var modalPopup = $('.modal-banner');
-              var close = $('.modalbanner-close');
-              var checkBox = $('#check-close-banner');
-              var banner = $('#modal-banner .banner-promotion');
-
-              function hidePopup() {
-                  modalPopup.hide();
-              }
-
-              function isPopupClosed() {
-                  // Kiểm tra xem cookie hoặc localStorage có thông tin ngày giống với ngày hiện tại hay không
-                  var storedDate = localStorage.getItem('popupClosedDate');
-                  if (storedDate) {
-                      var currentDate = new Date().toLocaleDateString("en-US", {
-                          timeZone: "Asia/Ho_Chi_Minh"
-                      });
-                      return storedDate === currentDate;
-                  }
-                  return false;
-              }
-
-              $(document).on('click', '#modal-banner .modalbanner-overlay, .fancybox-overlay', function(e) {
-                  hidePopup();
-                  if (checkBox.prop('checked')) {
-                      // Lưu ngày hiện tại vào localStorage
-                      var currentDate = new Date().toLocaleDateString("en-US", {
-                          timeZone: "Asia/Ho_Chi_Minh"
-                      });
-                      localStorage.setItem('popupClosedDate', currentDate);
-                  }
-              });
-
-              close.click(function() {
-                  hidePopup();
-                  if (checkBox.prop('checked')) {
-                      // Lưu ngày hiện tại vào localStorage
-                      var currentDate = new Date().toLocaleDateString("en-US", {
-                          timeZone: "Asia/Ho_Chi_Minh"
-                      });
-                      localStorage.setItem('popupClosedDate', currentDate);
-                  }
-              });
-
-              banner.click(function() {
-                  // Lưu ngày hiện tại vào localStorage
-                  var currentDate = new Date().toLocaleDateString("en-US", {
-                      timeZone: "Asia/Ho_Chi_Minh"
-                  });
-                  localStorage.setItem('popupClosedDate', currentDate);
-              });
-
-              if (!isPopupClosed()) {
-                  var delayTime = $('#modal-banner').data('delay') || 3000;
-                  setTimeout(function() {
-                      var section = $('#modal-banner .banner-promotion');
-                      var template = $('script[data-template="banner_popup"]').html();
-                      if (template) {
-                          $('.banner-promotion[data-section="banner_popup"]').html(template);
-                          var banner = $('#modal-banner .banner-promotion');
-                          banner.click(function() {
-                              // Lưu ngày hiện tại vào localStorage
-                              var currentDate = new Date().toLocaleDateString("en-US", {
-                                  timeZone: "Asia/Ho_Chi_Minh"
-                              });
-                              localStorage.setItem('popupClosedDate', currentDate);
-                          });
-                      }
-                      modalPopup.show();
-                  }, delayTime);
-              }
-          });
-      </script> -->
     <div class="main-widget">
         <div class="def-content unsee element">
             <div class="def-header">
@@ -467,7 +230,7 @@
                 </div>
             </div>
             <div class="item phone">
-                <a href="tel:19006750">
+                <a href="tel:{{str_replace(' ', '', $config->hotline)}}">
                     <span class="img">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                             <path fill="currentColor"
@@ -480,13 +243,13 @@
                             Hotline:
                         </b>
                         <span class="arcu-item-subtitle">
-                            19006750
+                            {{$config->hotline}}
                         </span>
                     </div>
                 </a>
             </div>
             <div class="item zalo">
-                <a target="_blank" href="https://zalo.me/0123456789">
+                <a target="_blank" href="https://zalo.me/{{str_replace(' ', '', $config->zalo)}}">
                     <span class="img">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                             version="1.1" viewBox="0 0 614.501 613.667" xml:space="preserve">
@@ -506,13 +269,13 @@
                             Zalo chat:
                         </b>
                         <span class="arcu-item-subtitle">
-                            Tài khoản Zalo: 0123 456 789
+                            Tài khoản Zalo: {{str_replace(' ', '', $config->zalo)}}
                         </span>
                     </div>
                 </a>
             </div>
             <div class="item mess">
-                <a target="_blank" href="https://m.me/sapowebvietnam">
+                <a target="_blank" href="{{$config->facebook}}">
                     <span class="img">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                             fill="currentColor" class="bi bi-messenger" viewBox="0 0 16 16">
@@ -525,13 +288,13 @@
                             Messenger:
                         </b>
                         <span class="arcu-item-subtitle">
-                            m.me/sapowebvietnam
+                            {{$config->facebook}}
                         </span>
                     </div>
                 </a>
             </div>
             <div class="item map">
-                <a target="_blank" href="/he-thong-cua-hang">
+                <a target="_blank" href="{{route('front.store-page')}}">
                     <span class="img">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                             fill="currentColor" class="bi bi-pin-map" viewBox="0 0 16 16">
@@ -543,10 +306,10 @@
                     </span>
                     <div class="detail">
                         <b class="arcu-item-title">
-                            Hệ thống cửa hàng:
+                            Hệ thống:
                         </b>
                         <span class="arcu-item-subtitle">
-                            Xem địa chỉ cửa hàng
+                            Xem địa chỉ
                         </span>
                     </div>
                 </a>
