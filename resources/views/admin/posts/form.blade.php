@@ -48,6 +48,7 @@
 		<div class="form-group text-center mb-4">
 			<div class="main-img-preview">
 				<p class="help-block-img">* Ảnh định dạng: jpg, png không quá 2MB.</p>
+                <p class="help-block-img">Kích thước: 1152 × 768 px</p>
 				<img class="thumbnail img-preview" ng-src="<% form.image.path %>">
 			</div>
 			<div class="input-group" style="width: 100%; text-align: center">

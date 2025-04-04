@@ -69,7 +69,7 @@
                     <label class="form-label required-label">Tỉnh/Thành phố</label>
                     <select class="form-control" select2 ng-model="form.province_id" ng-change="changeProvince(form.province_id)">
                         <option value="">Chọn tỉnh/thành phố</option>
-                        <option ng-repeat="t in provinces" ng-value="t.id"><% t.name_with_type %></option>
+                        <option ng-repeat="t in provinces" ng-value="t.id" ng-selected="t.id == form.province_id"><% t.name_with_type %></option>
                     </select>
                     <span class="invalid-feedback d-block" role="alert">
                         <strong>
@@ -83,7 +83,7 @@
                     <label class="form-label required-label">Quận/Huyện</label>
                     <select class="form-control " select2 ng-model="form.district_id" ng-change="changeDistrict(form.district_id)">
                         <option value="">Chọn quận/huyện</option>
-                        <option ng-repeat="t in districts" ng-value="t.id"><% t.name_with_type %></option>
+                        <option ng-repeat="t in districts" ng-value="t.id" ng-selected="t.id == form.district_id"><% t.name_with_type %></option>
                     </select>
                     <span class="invalid-feedback d-block" role="alert">
                         <strong>
@@ -97,7 +97,7 @@
                     <label class="form-label required-label">Phường/Xã</label>
                     <select class="form-control " select2 ng-model="form.ward_id" ng-change="changeWard(form.ward_id)">
                         <option value="">Chọn phường/xã</option>
-                        <option ng-repeat="t in wards" ng-value="t.id"><% t.name_with_type %></option>
+                        <option ng-repeat="t in wards" ng-value="t.id" ng-selected="t.id == form.ward_id"><% t.name_with_type %></option>
                     </select>
                     <span class="invalid-feedback d-block" role="alert">
                         <strong>
@@ -118,14 +118,27 @@
                 </div>
             </div>
         </div>
-        <div class="form-group custom-group mb-4">
-            <label class="form-label required-label">Google Map</label>
-            <input class="form-control " type="text" ng-model="form.google_map">
-            <span class="invalid-feedback d-block" role="alert">
-                <strong>
-                    <% errors.google_map[0] %>
-                </strong>
-            </span>
+        <div class="row">
+            <div class="col-md-9">
+                <div class="form-group custom-group mb-4">
+                    <label class="form-label required-label">Google Map</label>
+                    <input class="form-control " type="text" ng-model="form.google_map">
+                    <span class="invalid-feedback d-block" role="alert">
+                        <strong>
+                            <% errors.google_map[0] %>
+                        </strong>
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group custom-group mb-4">
+                    <label class="form-label required-label">Hành động</label>
+                    <select class="form-control" ng-model="form.google_map_action">
+                        <option value="1" ng-selected="form.google_map_action == 1">Được click mở bản đồ</option>
+                        <option value="0" ng-selected="form.google_map_action == 0">Không click mở bản đồ</option>
+                    </select>
+                </div>
+            </div>
         </div>
         <div class="form-group custom-group mb-4">
             <label class="form-label">Mô tả ngắn</label>
@@ -231,7 +244,7 @@
             <div class="main-img-preview">
                 <label for="">Ảnh địa điểm</label>
                 <p class="help-block-img">* Ảnh định dạng: jpg, png không quá 2MB.</p>
-                <p class="help-block-img">Kích thước: 500x500px</p>
+                <p class="help-block-img">Kích thước: 1152 × 768 px</p>
                 <img class="thumbnail img-preview" ng-src="<% form.image.path %>">
             </div>
             <div class="input-group" style="width: 100%; text-align: center">
@@ -272,6 +285,7 @@
         <hr>
         <div class="form-group text-center">
             <label for="">Thư viện ảnh địa điểm</label>
+            <p class="help-block-img">Kích thước: 1152 × 768 px</p>
             <div class="row gallery-area border">
                 <div class="col-md-4 p-2" ng-repeat="g in form.galleries">
                     <div class="gallery-item">

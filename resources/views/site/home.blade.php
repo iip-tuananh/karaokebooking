@@ -84,28 +84,30 @@
     </div>
 </div>
 <script>
-    let swiperSlider = null;
+    document.addEventListener("DOMContentLoaded", function () {
+        let swiperSlider = null;
 
-    function initSwiperSlider() {
-        swiperSlider = new Swiper('.section_slider .swiper-container', {
-            speed: 1000,
-            spaceBetween: 14,
-            effect: 'fade',
-            navigation: {
-                nextEl: '.section_slider .swiper-button-next',
-                prevEl: '.section_slider .swiper-button-prev',
-            },
-            autoplay: {
-                delay: 8000,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: '.section_slider .swiper-pagination',
-                clickable: true,
-            },
-        });
-    }
-    initSwiperSlider();
+        function initSwiperSlider() {
+            swiperSlider = new Swiper('.section_slider .swiper-container', {
+                speed: 1000,
+                spaceBetween: 14,
+                effect: 'fade',
+                navigation: {
+                    nextEl: '.section_slider .swiper-button-next',
+                    prevEl: '.section_slider .swiper-button-prev',
+                },
+                autoplay: {
+                    delay: 8000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '.section_slider .swiper-pagination',
+                    clickable: true,
+                },
+            });
+        }
+        initSwiperSlider();
+    });
 </script>
 <section class="section_search" ng-controller="StorePageController">
     <div class="widget_search_box advance_option pc offFunction clearfix">
@@ -165,29 +167,29 @@
                             <form id="booking-form">
                                 <div class="form-group">
                                     <label for="name" class="text-white">Họ và tên</label>
-                                    <input type="text" class="form-control" id="name" name="name">
+                                    <input type="text" class="form-control" id="name" name="contact['Họ tên']">
                                 </div>
                                 <div class="form-group">
                                     <label for="phone" class="text-white">Số điện thoại</label>
-                                    <input type="text" class="form-control" id="phone" name="phone">
+                                    <input type="text" class="form-control" id="phone" name="contact['Số điện thoại']">
                                 </div>
                                 <div class="input-date">
                                     <div class="form-group w-70">
                                         <label for="date" class="text-white">Ngày</label>
-                                        <input type="date" class="form-control" id="date" name="date">
+                                        <input type="date" class="form-control" id="date" name="contact['Ngày']">
                                     </div>
                                     <div class="form-group w-30">
                                         <label for="time" class="text-white">Giờ</label>
-                                        <input type="time" class="form-control" id="time" name="time">
+                                        <input type="time" class="form-control" id="time" name="contact['Giờ']">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="address" class="text-white">Số người</label>
-                                    <input type="number" class="form-control" id="address" name="address">
+                                    <input type="number" class="form-control" id="address" name="contact['Số người']">
                                 </div>
                                 <div class="form-group">
                                     <label for="message" class="text-white">Ghi chú</label>
-                                    <textarea class="form-control" id="message" name="message"></textarea>
+                                    <textarea class="form-control" id="message" name="contact['Ghi chú']"></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-primary">Đặt chỗ ngay</button>
                             </form>
@@ -729,6 +731,83 @@
 @push('scripts')
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.min.js"></script>
+    <script>
+        $('#booking-form').validate({
+            rules: {
+                "contact['Họ tên']": {
+                    required: true,
+                },
+                "contact['Số điện thoại']": {
+                    required: true,
+                    digits: true, // Chỉ cho phép số
+                    minlength: 10, // Tối thiểu 10 số
+                    maxlength: 11 // Tối đa 11 số
+                },
+                "contact['Ngày']": {
+                    required: true,
+                    date: true,
+                },
+                "contact['Giờ']": {
+                    required: true,
+                },
+                "contact['Số người']": {
+                    required: true,
+                    number: true,
+                },
+            },
+            messages: {
+                "contact['Họ tên']": {
+                    required: "Nhập họ tên"
+                },
+                "contact['Số điện thoại']": {
+                    required: "Nhập số điện thoại",
+                    digits: "Số điện thoại chỉ được chứa số",
+                    minlength: "Số điện thoại phải có ít nhất 10 số",
+                    maxlength: "Số điện thoại không được quá 11 số"
+                },
+                "contact['Ngày']": {
+                    required: "Nhập ngày",
+                    date: "Ngày không hợp lệ"
+                },
+                "contact['Giờ']": {
+                    required: "Nhập giờ",
+                    time: "Giờ không hợp lệ"
+                },
+                "contact['Số người']": {
+                    required: "Nhập số người",
+                    number: "Phải nhập số"
+                },
+            },
+            errorPlacement: function(error, element) {
+                // Tạo hoặc tìm thẻ <span> để hiển thị lỗi
+                var errorSpan = $(element).next("span.error-message");
+                if (errorSpan.length === 0) {
+                    errorSpan = $("<span class='error-message w-100'></span>").insertAfter(element);
+                }
+                errorSpan.text(error.text());
+            },
+            success: function(label, element) {
+                $(element).next("span.error-message").remove(); // Xóa thông báo lỗi khi nhập đúng
+            },
+            submitHandler: function(form) {
+                let formData = $("#booking-form").serializeArray();
+
+                $.ajax({
+                    url: "https://script.google.com/macros/s/AKfycbxCW5eIV1anKJst2IVnrvsZOAaQWIYI6Evble7jkoloLTyGBmf0qtyKpUADe2N5DaY/exec",
+                    type: "post",
+                    data: formData,
+                    success: function() {
+                        $.notify("Thành công! Chúng tôi sẽ sớm liên hệ", "success");
+                    },
+                    error: function() {
+                        $.notify("Gửi thông tin thất bại", "error");
+                    }
+                });
+            }
+        });
+    </script>
     <script>
         app.controller('StorePageController', function($scope, $http) {
             $scope.provinces = @json(\App\Model\Common\Province::getForSelect());

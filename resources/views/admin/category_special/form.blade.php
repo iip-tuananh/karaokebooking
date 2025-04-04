@@ -66,6 +66,7 @@
                 <label class="form-label">Banner danh mục</label>
                 <div class="main-img-preview">
                     <p class="help-block-img">* Ảnh định dạng: jpg, png không quá 2MB.</p>
+                    <p class="help-block-img">Kích thước: 1366 × 341 px</p>
                     <img class="thumbnail img-preview" ng-src="<% form.image.path %>">
                 </div>
                 <div class="input-group" style="width: 100%; text-align: center">

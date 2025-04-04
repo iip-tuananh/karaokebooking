@@ -126,6 +126,7 @@ class ProductController extends Controller
             $object->ward_id = $request->ward_id;
             $object->address = $request->address ?? null;
             $object->google_map = $request->google_map;
+            $object->google_map_action = $request->google_map_action;
             $ward = Ward::query()->find($request->ward_id);
             $object->place = $object->address ? $object->address . ', ' . $ward->path_with_type : $ward->path_with_type;
 
@@ -203,6 +204,7 @@ class ProductController extends Controller
             $object->ward_id = $request->ward_id;
             $object->address = $request->address ?? null;
             $object->google_map = $request->google_map;
+            $object->google_map_action = $request->google_map_action;
             $ward = Ward::query()->find($request->ward_id);
             $object->place = $object->address ? $object->address . ', ' . $ward->path_with_type : $ward->path_with_type;
 			$object->save();

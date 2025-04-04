@@ -642,7 +642,7 @@ class FrontController extends Controller
     }
 
     public function getLocation(Request $request) {
-        $data = Product::query()->where('status', 1)->select('name', 'place', 'google_map')->distinct();
+        $data = Product::query()->where('status', 1)->select('name', 'place', 'google_map', 'google_map_action')->distinct();
         if ($request->type == 'all') {
             $data = $data->limit(100);
         } else {

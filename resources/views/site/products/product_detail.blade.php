@@ -168,7 +168,10 @@
                                         <div id="tab-video" class="tab-content content_extab">
                                             <div class="rte">
                                                 <div class="pro_video">
-                                                    <div class="iframe_video">
+                                                    <div class="iframe_video" >
+                                                        @if (!$product->google_map_action)
+                                                        <div class="iframe-mask"></div>
+                                                        @endif
                                                         {!! $product->google_map !!}
                                                     </div>
                                                 </div>
@@ -177,85 +180,27 @@
                                     </div>
                                 </div>
                                 <div class="product-favi">
-                                    <a href="san-pham-noi-bat" title="CÓ THỂ BẠN THÍCH">
+                                    <a href="{{route('front.show-product-category', 'san-pham-noi-bat')}}" title="CÓ THỂ BẠN THÍCH">
                                         <div class="title-head">
                                             CÓ THỂ BẠN THÍCH
                                         </div>
                                     </a>
                                     <div class="product-favi-content">
+                                        @foreach ($productsRelated as $product)
                                         <div class="product-view">
-                                            <a class="image_thumb" href="/ruou-champagne-louis-roederer-vintage"
-                                                title="Rượu Champagne Louis Roederer Vintage">
+                                            <a class="image_thumb" href="{{route('front.show-product-detail', $product->slug)}}"
+                                                title="{{$product->name}}">
                                                 <img width="480" height="480" class="lazyload"
                                                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                                                    data-src="//bizweb.dktcdn.net/thumb/large/100/539/564/products/ruou-champagne-louis-roederer-vintage.jpg?v=1733903941223"
-                                                    alt="Rượu Champagne Louis Roederer Vintage">
+                                                    data-src="{{$product->image ? $product->image->path : ''}}"
+                                                    alt="{{$product->name}}">
                                             </a>
                                             <div class="product-info">
-                                                <h3 class="product-name"><a href="/ruou-champagne-louis-roederer-vintage"
-                                                        title="Rượu Champagne Louis Roederer Vintage">Rượu Champagne Louis
-                                                        Roederer Vintage</a></h3>
-                                                <div class="price-box">
-                                                    <span class="price">2.950.000₫</span>
-                                                    <span class="compare-price">3.510.000₫</span>
-                                                </div>
+                                                <h3 class="product-name"><a href="{{route('front.show-product-detail', $product->slug)}}"
+                                                        title="{{$product->name}}" style="color: #000">{{$product->name}}</a></h3>
                                             </div>
                                         </div>
-                                        <div class="product-view">
-                                            <a class="image_thumb"
-                                                href="/ly-ruou-manh-riedel-bar-cognac-riedel-restaurant"
-                                                title="Ly Rượu Mạnh RIEDEL Bar Cognac Riedel Restaurant">
-                                                <img width="480" height="480" class="lazyload"
-                                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                                                    data-src="//bizweb.dktcdn.net/thumb/large/100/539/564/products/riedel-bar-cognac-riedel-restaurant.jpg?v=1733900836017"
-                                                    alt="Ly Rượu Mạnh RIEDEL Bar Cognac Riedel Restaurant">
-                                            </a>
-                                            <div class="product-info">
-                                                <h3 class="product-name"><a
-                                                        href="/ly-ruou-manh-riedel-bar-cognac-riedel-restaurant"
-                                                        title="Ly Rượu Mạnh RIEDEL Bar Cognac Riedel Restaurant">Ly Rượu
-                                                        Mạnh RIEDEL Bar Cognac Riedel Restaurant</a></h3>
-                                                <div class="price-box">
-                                                    <span class="price">365.000₫</span>
-                                                    <span class="compare-price">385.000₫</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-view">
-                                            <a class="image_thumb" href="/ruou-vodka-grey-goose-l-orange"
-                                                title="Rượu Vodka Grey Goose L Orange">
-                                                <img width="480" height="480" class="lazyload"
-                                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                                                    data-src="//bizweb.dktcdn.net/thumb/large/100/539/564/products/ruou-vodka-grey-goose-lorange.jpg?v=1733893153790"
-                                                    alt="Rượu Vodka Grey Goose L Orange">
-                                            </a>
-                                            <div class="product-info">
-                                                <h3 class="product-name"><a href="/ruou-vodka-grey-goose-l-orange"
-                                                        title="Rượu Vodka Grey Goose L Orange">Rượu Vodka Grey Goose L
-                                                        Orange</a></h3>
-                                                <div class="price-box">
-                                                    <span class="price">1.320.000₫</span>
-                                                    <span class="compare-price">1.400.000₫</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-view">
-                                            <a class="image_thumb" href="/ruou-grey-goose-vodka"
-                                                title="Rượu Grey Goose Vodka">
-                                                <img width="480" height="480" class="lazyload"
-                                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-                                                    data-src="//bizweb.dktcdn.net/thumb/large/100/539/564/products/ruou-grey-goose-vodka.jpg?v=1733891065977"
-                                                    alt="Rượu Grey Goose Vodka">
-                                            </a>
-                                            <div class="product-info">
-                                                <h3 class="product-name"><a href="/ruou-grey-goose-vodka"
-                                                        title="Rượu Grey Goose Vodka">Rượu Grey Goose Vodka</a></h3>
-                                                <div class="price-box">
-                                                    <span class="price">750.000₫</span>
-                                                    <span class="compare-price">785.000₫</span>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        @endforeach
                                     </div>
                                 </div>
                             </div>
@@ -313,7 +258,7 @@
             </div>
         </div>
     </section>
-    <div id="specificationsModal" class="modal-specifications" style="display:none;">
+    {{-- <div id="specificationsModal" class="modal-specifications" style="display:none;">
         <div class="modalsize-overlay fancybox-overlay fancybox-overlay-fixed"></div>
         <div class="modal-specificationsModal-product">
             <div class="chosee_size">
@@ -377,7 +322,7 @@
                 </table>
             </div>
         </div>
-    </div>
+    </div> --}}
     <script>
         $(document).ready(function() {
             $('.box_com_bo_buy').click(function() {

@@ -202,7 +202,8 @@
                 district_id: this.district_id,
                 ward_id: this.ward_id,
                 address: this.address,
-                google_map: this.google_map
+                google_map: this.google_map,
+                google_map_action: this.google_map_action
             }
 
             console.log(this.use_url_custom);

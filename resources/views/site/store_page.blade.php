@@ -124,6 +124,7 @@
                 <div class="col-md-7 col-lg-8 col-md-12 col-12 col-right">
                     <div class="wrapcontact">
                         <div class="iFrameMap">
+                            <div class="iframe-mask" ng-if="disableMap"></div>
                             <div id="map_contact" class="map" ng-bind-html="trustAsHtml(mapHtml)">
 
                             </div>
@@ -353,6 +354,7 @@
             $scope.provinces = @json(\App\Model\Common\Province::getForSelect());
             $scope.listLocation = [];
             $scope.mapHtml = '';
+            $scope.disableMap = false;
             $scope.nameActive = '';
             $scope.province_id = '';
             $scope.district_id = '';
@@ -388,6 +390,7 @@
             $scope.changeLocation = function(location) {
                 $scope.mapHtml = location.google_map;
                 $scope.nameActive = location.name;
+                $scope.disableMap = location.google_map_action == 1 ? false : true;
             }
 
             $scope.changeProvince = function(province) {

@@ -31,7 +31,19 @@
             $scope.arrayInclude = arrayInclude;
 
             $scope.form = new Product(@json($object), {scope: $scope});
-            console.log($scope.form.documents);
+            if ($scope.form.province_id) {
+                $scope.districts = @json(\App\Model\Common\District::getForSelect()).filter(item => item.parent_code == $scope.form.province_id).map(item => ({
+                    id: item.id,
+                    name_with_type: item.name_with_type
+                }));
+            }
+            if ($scope.form.district_id) {
+                $scope.wards = @json(\App\Model\Common\Ward::getForSelect()).filter(item => item.parent_code == $scope.form.district_id).map(item => ({
+                    id: item.id,
+                    name_with_type: item.name_with_type
+                }));
+            }
+
             $scope.submit = function () {
                 $scope.loading.submit = true;
                 let data = $scope.form.submit_data;

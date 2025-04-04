@@ -3344,7 +3344,7 @@
 }
 
 .section_choose .swi_choose .swiper-slide {
-    height: auto !important
+    height: 254px!important;
 }
 
 @media (min-width: 992px) {
@@ -4090,4 +4090,34 @@
 
 .text-black {
     color: #000 !important;
+}
+
+.iframe_video, .iFrameMap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.iframe_video iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.iframe-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background: transparent;
+    cursor: not-allowed; /* tuỳ chọn, để biểu thị không được click */
+}
+
+.error-message {
+    color: #f89a9a;
+    font-size: 10px;
+    margin-top: 4px;
+    display: block;
 }
