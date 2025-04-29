@@ -727,7 +727,7 @@
 .social-sharing .social-media li a {
     width: 28px;
     height: 28px;
-    background: var(--mainColor);
+    /* background: var(--mainColor); */
     display: flex;
     justify-content: center;
     align-items: center

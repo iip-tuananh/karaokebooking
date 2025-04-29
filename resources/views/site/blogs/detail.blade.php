@@ -97,7 +97,7 @@
                                 </div>
                                 <div class="social-sharing">
                                     <ul class="social-media" role="list">
-                                        <li class="title">
+                                        <li class="title" style="color: #fff;">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                 fill="currentColor" class="bi bi-share" viewBox="0 0 16 16">
                                                 <path

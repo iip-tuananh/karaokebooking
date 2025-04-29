@@ -56,12 +56,12 @@ app.directive("ckEditor", function() {
                     }
                 },
                 disallowedContent: "script; *[on*]",
+                extraAllowedContent: 'div[data-oembed-url]; iframe[*];',
                 height: scope.height || 350,
                 basicEntities: false,
                 enterMode: CKEDITOR.ENTER_DIV,
                 bodyClass: "document-editor",
-                extraPlugins: "tableresize,pastefromword,lineheight,embed,embedbase",
-                embed_provider: '//ckeditor.iframe.ly/api/oembed?url={url}&callback={callback}',
+                extraPlugins: "tableresize,pastefromword,lineheight,youtubebutton",
                 line_height: "1;1.2;1.5;2;3;4",
                 toolbar: [
                     { name: "document", items: ["Source"] },
@@ -112,7 +112,7 @@ app.directive("ckEditor", function() {
                         name: "insert",
                         items: [
                             "Image",
-                            "Embed",
+                            "YouTube",
                             "Table",
                             "HorizontalRule",
                             "SpecialChar",
