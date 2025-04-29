@@ -76,7 +76,7 @@ app
                             name: 'paragraph',
                             items: ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock']
                         },
-                        {name: 'insert', items: ['Image', 'Table', 'HorizontalRule', 'SpecialChar', 'PageBreak']},
+                        {name: 'insert', items: ['Image', 'Embed', 'Table', 'HorizontalRule', 'SpecialChar', 'PageBreak']},
                         {name: 'links', items: ['Link', 'Unlink', 'Anchor']},
                         '/',
                         {name: 'styles', items: ['Styles', 'Format', 'Font', 'FontSize', 'lineheight']},

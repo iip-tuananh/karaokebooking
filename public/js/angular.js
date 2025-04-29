@@ -112,6 +112,7 @@ app.directive("ckEditor", function() {
                         name: "insert",
                         items: [
                             "Image",
+                            "Embed",
                             "Table",
                             "HorizontalRule",
                             "SpecialChar",
