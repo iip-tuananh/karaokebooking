@@ -60,7 +60,8 @@ app
                     basicEntities: false,
                     enterMode: CKEDITOR.ENTER_DIV,
                     bodyClass: 'document-editor',
-                    extraPlugins: 'tableresize,pastefromword,lineheight',
+                    extraPlugins: 'tableresize,pastefromword,lineheight,embed,embedbase',
+                    embed_provider: '//ckeditor.iframe.ly/api/oembed?url={url}&callback={callback}',
                     line_height: "1;1.2;1.5;2;3;4",
                     toolbar: [
                         {name: 'document', items: ['Source']},
